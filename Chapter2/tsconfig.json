@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "strict": true,
+        "target": "es6"
+    },
+    "include": [
+        "*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+    ]
+}
