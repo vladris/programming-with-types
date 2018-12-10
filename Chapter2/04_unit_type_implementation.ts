@@ -6,4 +6,9 @@ class Unit {
     private constructor() { };
 }
 
+function greet(): Unit {
+    console.log("Hello world!");
+    return Unit.value;
+}
+
 }
