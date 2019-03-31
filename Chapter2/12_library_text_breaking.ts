@@ -16,8 +16,8 @@ function lineBreak(text: string, lineLength: number) {
 }
 
 console.log(lineBreak("Testing, testing", 5));
-console.log(lineBreak("..👧🏾", 5));
-console.log(lineBreak("...👧🏾", 5));
-console.log(lineBreak("....👧🏾", 5));
+console.log(lineBreak("...👮‍♀️", 5));
+console.log(lineBreak("....👮‍♀️", 5));
+console.log(lineBreak(".....👮‍♀️", 5));
 
 }
