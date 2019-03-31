@@ -1,7 +1,9 @@
 namespace EmptyTypeImplementation {
 
+declare const EmptyType: unique symbol;
+
 class Empty {
-    private __property: void;
+    [EmptyType]: void;
     private constructor() { }
 }
 

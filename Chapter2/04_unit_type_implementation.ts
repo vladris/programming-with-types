@@ -1,7 +1,9 @@
 namespace UnitTypeImplementation {
 
+declare const UnitType: unique symbol;
+
 class Unit {
-    private __property: void;
+    [UnitType]: void;
     static readonly value: Unit = new Unit();
     private constructor() { };
 }

@@ -24,7 +24,7 @@ class Either<TLeft, TRight> {
     }
 
     getRight(): TRight {
-        if (this.isRight()) throw new Error();
+        if (!this.isRight()) throw new Error();
 
         return <TRight>this.value;
     }
