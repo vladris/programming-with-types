@@ -1,2 +1,1 @@
-# practical-types
-Practical Types code samples
+# Programming with Types code samples
