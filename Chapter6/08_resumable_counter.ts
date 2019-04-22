@@ -1,6 +1,6 @@
 namespace ResumableCounter {
 
-function *counter(): Iterator<number> {
+function* counter(): Iterator<number> {
     let n: number = 1;
 
     while (true) {
