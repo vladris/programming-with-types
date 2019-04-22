@@ -3,7 +3,7 @@ namespace AdhocFiltering {
 let numbers: number[] = [1, 2, 3, 4, 5];
 let evens: number[] = []
 
-for (let n of numbers) {
+for (const n of numbers) {
     if (n % 2 == 0) {
         evens.push(n);
     }
@@ -12,7 +12,7 @@ for (let n of numbers) {
 let strings: string[] = ["apple", "orange", "peach"];
 let length6Strings: string[] = [];
 
-for (let s of strings) {
+for (const s of strings) {
     if (s.length == 5) {
         length6Strings.push(s);
     }
