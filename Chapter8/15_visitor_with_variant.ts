@@ -27,7 +27,7 @@ function visit<T1, T2, T3>(
     func1: (value: T1) => void,
     func2: (value: T2) => void,
     func3: (value: T3) => void
-) {
+): void {
     switch (variant.index) {
         case 0: func1(<T1>variant.value); break;
         case 1: func2(<T2>variant.value); break;

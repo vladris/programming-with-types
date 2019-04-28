@@ -1,7 +1,7 @@
 namespace CollectionWithAnyType {
 
 class MyDocument {
-    items: any[];
+    items: unknown[];
 
     constructor() {
         this.items = [];
