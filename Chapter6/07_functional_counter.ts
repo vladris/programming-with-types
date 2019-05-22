@@ -3,7 +3,7 @@ namespace FunctionalCounter {
 type Counter = () => number;
 
 function makeCounter(): Counter {
-    let n: number = 0;
+    let n: number = 1;
 
     return () => n++;
 }
