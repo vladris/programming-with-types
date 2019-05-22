@@ -7,20 +7,20 @@ interface IWidgetFactory {
 }
 
 class WidgetFactory implements IWidgetFactory {
-    makeWidget(): Widget {
+    public makeWidget(): Widget {
         return new Widget();
     }
 }
 
 class SingletonDecorator implements IWidgetFactory {
-    factory: IWidgetFactory;
-    instance: Widget | undefined;
+    private factory: IWidgetFactory;
+    private instance: Widget | undefined;
 
     constructor(factory: IWidgetFactory) {
         this.factory = factory;
     }
 
-    makeWidget(): Widget {
+    public makeWidget(): Widget {
         if (this.instance == undefined) {
             this.instance = this.factory.makeWidget();
         }
