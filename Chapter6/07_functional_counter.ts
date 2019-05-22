@@ -5,7 +5,7 @@ type Counter = () => number;
 function makeCounter(): Counter {
     let n: number = 0;
 
-    return () => { return n++ };
+    return () => n++;
 }
 
 let counter1: Counter = makeCounter();
