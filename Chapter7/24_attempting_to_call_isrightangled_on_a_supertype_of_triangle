@@ -1,4 +1,4 @@
-namespace AttemptingToCallIsRightOnASupertypeOfTriangle {
+namespace AttemptingToCallIsRightAngledOnASupertypeOfTriangle {
 
 class Shape {
     /* Shape members */
@@ -8,10 +8,10 @@ declare const TriangleType: unique symbol;
 class Triangle extends Shape {
     [TriangleType]: void;
 
-    isRight(): boolean {
+    isRightAngled(): boolean {
         let result: boolean = false;
 
-        /* Determine whether it is a right triangle */
+        /* Determine whether it is a right-angled triangle */
 
         return result;
     } 
@@ -20,7 +20,7 @@ class Triangle extends Shape {
 }
 
 function drawTriangle(triangle: Triangle): void {
-    console.log(triangle.isRight());
+    console.log(triangle.isRightAngled());
     /* ... */
 }
 
