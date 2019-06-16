@@ -3,7 +3,7 @@ namespace LbfsAndNsTypes {
 declare const NsType: unique symbol;
 
 class Ns {
-    value: number;
+    readonly value: number;
     [NsType]: void;
 
     constructor(value: number) {
@@ -14,7 +14,7 @@ class Ns {
 declare const LbfsType: unique symbol;
 
 class Lbfs {
-    value: number;
+    readonly value: number;
     [LbfsType]: void;
 
     constructor(value: number) {
