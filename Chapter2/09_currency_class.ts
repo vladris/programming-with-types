@@ -1,25 +1,20 @@
 namespace CurrencyClass {
 
-class Currency {
-    private dollars: number;
-    private cents: number;
+class Currency {  
+    private readonly cents: number;    
 
     constructor(dollars: number, cents: number) {
-        if (!Number.isSafeInteger(dollars))
-            throw new Error("Cannot safely represent dollar amount");
+        this.cents = dollars * 100 + cents;
 
-        if (!Number.isSafeInteger(cents))
-            throw new Error("Cannot safely represent cents amount");
-
-        this.dollars = dollars;
-        this.cents = cents;
+        if (!Number.isSafeInteger(this.cents))    
+            throw new Error("Cannot safely represent amount");
     }
 
-    getDollars(): number {
-        return this.dollars;
+    getDollars(): number {    
+        return Math.floor(this.cents / 100);
     }
 
-    getCents(): number {
+    getCents(): number {    
         return this.cents;
     }
 }
