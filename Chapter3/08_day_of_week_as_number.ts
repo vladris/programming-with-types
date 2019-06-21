@@ -5,7 +5,7 @@ function isWeekend(dayOfWeek: number): boolean {
 }
 
 function isWeekday(dayOfWeek: number): boolean {
-    return dayOfWeek >= 1 || dayOfWeek <= 5;
+    return dayOfWeek >= 1 && dayOfWeek <= 5;
 }
 
 }
