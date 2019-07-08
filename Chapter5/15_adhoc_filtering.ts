@@ -10,11 +10,11 @@ for (const n of numbers) {
 }
 
 let strings: string[] = ["apple", "orange", "peach"];
-let length6Strings: string[] = [];
+let length5Strings: string[] = [];
 
 for (const s of strings) {
     if (s.length == 5) {
-        length6Strings.push(s);
+        length5Strings.push(s);
     }
 }
 

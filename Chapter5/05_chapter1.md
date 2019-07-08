@@ -3,4 +3,5 @@
 Printing "Hello world!".
 <!-- helloWorld -->
 ```ts
-console.log("Hello");    
+console.log("Hello");
+```
