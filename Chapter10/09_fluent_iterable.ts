@@ -1,9 +1,9 @@
-namespace FluentIterator {
+namespace FluentIterable {
 
-class FluentIterator<T> {
-    iter: IterableIterator<T>;
+class FluentIterable<T> {
+    iter: Iterable<T>;
 
-    constructor(iter: IterableIterator<T>) {
+    constructor(iter: Iterable<T>) {
         this.iter = iter;
     }
 

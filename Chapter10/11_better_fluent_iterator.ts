@@ -1,14 +1,14 @@
-namespace BetterFluentIterator {
+namespace BetterFluentIterable {
 
-class FluentIterator<T> {
-    iter: IterableIterator<T>;
+class FluentIterable<T> {
+    iter: Iterable<T>;
 
-    constructor(iter: IterableIterator<T>) {
+    constructor(iter: Iterable<T>) {
         this.iter = iter;
     }
 
-    map<U>(func: (item: T) => U): FluentIterator<U> {
-        return new FluentIterator(this.mapImpl(func));
+    map<U>(func: (item: T) => U): FluentIterable<U> {
+        return new FluentIterable(this.mapImpl(func));
     }
 
     private *mapImpl<U>(func: (item: T) => U): IterableIterator<U> {
@@ -17,8 +17,8 @@ class FluentIterator<T> {
         }
     }
 
-    filter<U>(pred: (item: T) => boolean): FluentIterator<T> {
-        return new FluentIterator(this.filterImpl(pred));
+    filter<U>(pred: (item: T) => boolean): FluentIterable<T> {
+        return new FluentIterable(this.filterImpl(pred));
     }
 
     private *filterImpl(pred: (item: T) => boolean): IterableIterator<T> {

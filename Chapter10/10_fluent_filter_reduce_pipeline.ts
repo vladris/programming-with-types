@@ -27,10 +27,10 @@ function* inOrderIterator<T>(root: BinaryTreeNode<T>):
     }
 }
 
-class FluentIterator<T> {
-    iter: IterableIterator<T>;
+class FluentIterable<T> {
+    iter: Iterable<T>;
 
-    constructor(iter: IterableIterator<T>) {
+    constructor(iter: Iterable<T>) {
         this.iter = iter;
     }
 
@@ -65,13 +65,12 @@ root.left.right = new BinaryTreeNode(3);
 root.right = new BinaryTreeNode(4);
 
 const result: number =
-    new FluentIterator(
-        new FluentIterator(
+    new FluentIterable(
+        new FluentIterable(
             inOrderIterator(root)
         ).filter((value) => value % 2 == 0)
     ).reduce(0, (x, y) => x + y);
 
 console.log(result);
-
 
 }

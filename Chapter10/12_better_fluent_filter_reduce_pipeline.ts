@@ -27,15 +27,15 @@ function* inOrderIterator<T>(root: BinaryTreeNode<T>):
     }
 }
 
-class FluentIterator<T> {
-    iter: IterableIterator<T>;
+class FluentIterable<T> {
+    iter: Iterable<T>;
 
-    constructor(iter: IterableIterator<T>) {
+    constructor(iter: Iterable<T>) {
         this.iter = iter;
     }
 
-    map<U>(func: (item: T) => U): FluentIterator<U> {
-        return new FluentIterator(this.mapImpl(func));
+    map<U>(func: (item: T) => U): FluentIterable<U> {
+        return new FluentIterable(this.mapImpl(func));
     }
 
     private *mapImpl<U>(func: (item: T) => U): IterableIterator<U> {
@@ -44,8 +44,8 @@ class FluentIterator<T> {
         }
     }
 
-    filter<U>(pred: (item: T) => boolean): FluentIterator<T> {
-        return new FluentIterator(this.filterImpl(pred));
+    filter<U>(pred: (item: T) => boolean): FluentIterable<T> {
+        return new FluentIterable(this.filterImpl(pred));
     }
 
     private *filterImpl(pred: (item: T) => boolean): IterableIterator<T> {
@@ -73,7 +73,7 @@ root.left.right = new BinaryTreeNode(3);
 root.right = new BinaryTreeNode(4);
 
 const result: number =
-    new FluentIterator(inOrderIterator(root))
+    new FluentIterable(inOrderIterator(root))
     .filter((value) => value % 2 == 0)
     .reduce(0, (x, y) => x + y);
 
