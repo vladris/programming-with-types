@@ -12,7 +12,7 @@ class NumberList {
 
     append(value: number) {
         if (this.length < this.capacity) {
-            this.numbers[length] = value;
+            this.numbers[this.length] = value;
             this.length++;
             return;
         }
